@@ -40,7 +40,7 @@ No server setup is required.
 
 3. **View the deployed site**
 
-![Click here](https://st-charles-lwanga.netlify.app/)
+[Click here to view the live site](https://st-charles-lwanga.netlify.app/)
 
 ## 🙏 Acknowledgments
 This project is built with love for ST Charles Lwanga Catholic Church, to support digital outreach and community growth.

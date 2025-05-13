@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>St. Charles Lwanga Kenol Catholic Church</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <div class="logo">
+        <h1>St. Charles Lwanga</h1>
+        <p>Kenol Catholic Church</p>
+      </div>
+      <button id="menuToggle" class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul id="navMenu" class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#mass-times">Mass Times</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="report.html">Boresha Imani na Maendeleo</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+      </ul>
+      <button class="close-menu-btn">✕</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Welcome to St. Charles Lwanga Parish</h2>
+        <p>Growing in Faith, Serving in Love</p>
+        <a href="#" class="cta-button">Join Our Community</a>
+      </div>
+    </section>
+
+    <section class="mass-times" id="mass-times">
+      <h3>Mass Schedule</h3>
+      <div class="schedule-grid">
+        <div class="schedule-card">
+          <h4>Weekday Mass</h4>
+          <p>Monday - Friday: 6:30 AM</p>
+        </div>
+        <div class="schedule-card">
+          <h4>Sunday Mass</h4>
+          <p>7:30 AM, 9:30 AM</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="upcoming-events" id="events">
+      <h3>Upcoming Events</h3>
+      <div class="events-grid">
+        <div class="event-card">
+          <h4>Adoration</h4>
+          <p>Every First and Third Sunday of the Month, 3:00 PM</p>
+        </div>
+        <div class="event-card">
+          <h4> St Fatima Choir Practice</h4>
+          <p>Every Sunday, 7:00 AM</p>
+        </div>
+        <div class="event-card">
+          <h4> St Bakhita Choir Practice</h4>
+          <p>Every Sunday, 9:30 AM</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content" id="contact">
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-phone"></i> +254 768 804 077</p>
+        <p><i class="fas fa-envelope"></i> info@stcharleslwanga.org</p>
+        <p><i class="fas fa-map-marker-alt"></i> Kenol, Murang'a County</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 St. Charles Lwanga Kenol Catholic Church. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- <script src="script.js"></script> -->
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.querySelector('.mobile-menu-btn');
+      const navLinks = document.querySelector('.nav-links');
+      const closeButton = document.querySelector('.close-menu-btn');
+
+      menuButton.addEventListener('click', () => {
+        navLinks.classList.add('active');
+      });
+
+      closeButton.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+      navLinks.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          navLinks.classList.remove('active');
+          closeButton.style.display = 'none';
+        }
+      });
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+   </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boresha Imani na Maendeleo - Fundraiser Report</title>
+  <link rel="stylesheet" href="report.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <div class="logo">
+        <h1>St. Charles Lwanga</h1>
+        <p>Kenol Catholic Church</p>
+      </div>
+      <button id="menuToggle" class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul id="navMenu" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#contributors">Top Contributors</a></li>
+        <li><a href="#personalReport">Personal Report</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+      </ul>
+      <button class="close-menu-btn">✕</button>
+    </nav>
+  </header>
+  <main>
+    <!-- Overview Section -->
+    <section class="overview-section" id="overview">
+      <div class="container">
+        <h2>Boresha Imani na Maendeleo</h2>
+        <p class="initiative-description">
+          Our church's fundraising initiative to support community development and spiritual growth.
+          Running from December 2024 to May 2025.
+        </p>
+        <div class="stats-container">
+          <div class="stat-box">
+            <h3>Total Raised</h3>
+            <p class="stat-value"><span id="totalRaised">0</span></p>
+          </div>
+          <div class="stat-box">
+            <h3>Participants</h3>
+            <p class="stat-value"><span id="totalParticipants">0</span></p>
+          </div>
+          <div class="stat-box">
+            <h3>Target</h3>
+            <p class="stat-value"><span id="targetAmount">0</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Contributors Section -->
+    <section class="contributors-section" id="contributors">
+      <div class="container">
+        <h2>Our Top Contributors</h2>
+        <div class="contributors-grid" id="contributorsGrid">
+          <!-- Contributor cards will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Report Section -->
+
+    <section class="personal-report-section" id="personalReport">
+      <div class="container">
+        <h2>Check Your Progress</h2>
+        <div class="form-container">
+          <form id="progressForm" name="progressForm" 
+          method="POST" 
+          action="https://docs.google.com/forms/d/e/1FAIpQLSd69HyUQLO08llBlwN8PVeZlT-Bgi6wHJWT5q6nvfYLBrPvxQ/formResponse"
+          target="hidden_iframe"
+          onsubmit="submitted=true;">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="entry.372688130" required>  
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="entry.601290125" required>
+            </div>
+            <div class="form-group">
+              <label for="scc">Small Christian Community</label>
+              <input type="text" id="scc" name="entry.1927093380">
+            </div>
+            
+            <!-- ✅ Association checkboxes -->
+            <div class="form-group">
+              <label>Associations (if any):</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="entry.1526381328" value="Youth"> Youth</label>
+                <label><input type="checkbox" name="entry.1526381328" value="YACA"> YACA</label>
+                <label><input type="checkbox" name="entry.1526381328" value="CMA"> CMA</label>
+                <label><input type="checkbox" name="entry.1526381328" value="CWA"> CWA</label>
+                <label><input type="checkbox" name="entry.1526381328" value="PMC"> PMC</label>
+                <label><input type="checkbox" name="entry.1526381328" value="Choir"> Choir</label>
+
+                <label><input type="checkbox" name="entry.1526381328" value="Others"> Others</label>
+
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Check My Progress</button>
+          </form>
+
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+        </div>
+        <div class="report-display" id="reportDisplay">
+          <!-- Personal report will be displayed here -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="footer-content" id="contact">
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-phone"></i> +254 768 804 077</p>
+        <p><i class="fas fa-envelope"></i> info@stcharleslwanga.org</p>
+        <p><i class="fas fa-map-marker-alt"></i> Kenol, Murang'a County</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 St. Charles Lwanga Kenol Catholic Church. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="report.js"></script>
+</body>
+</html>
+        
